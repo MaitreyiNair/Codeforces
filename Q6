@@ -1,0 +1,87 @@
+//
+//  main.c
+//  ad
+//
+//  Created by MAITREYI NAIR on 25/12/20.
+//
+
+#include <stdio.h>
+int n;
+
+
+
+
+
+
+int main()
+{
+    scanf("%d",&n);
+    int i = 0;
+    int arr[n];
+    while(i < n)
+    {
+        scanf("%d",&arr[i]);
+        i++;
+     }
+    
+    int lrg1 = 0;
+    int i1 = 0;
+    while (i1 < n) {
+            if (lrg1 < arr[i1])
+                lrg1 = arr[i1];
+              i1++;
+        }
+    
+    int a = lrg1;
+    int i2 = 0;
+    int lrg=0;
+    int n1 = n;
+    
+    //printf("%d",n1);
+    
+    
+    
+     
+    while (i2>0) {
+        for(i2=0;i2++;)
+        {
+         
+        if(i2 >= n1)
+           {
+               for(i2=0;i2<n1;i2++)
+              {
+                  if(arr[i2]==a)
+                    {
+                      i2++;   //ignoring the largest element
+                      i2--;
+                    }
+                  else
+                    {
+                      if(lrg<arr[i2])
+                     {
+                           lrg=arr[i2];
+                         }
+                    }
+    
+    
+              }
+               }
+        else
+            {
+            if(a % arr[i2] != 0)
+                break;
+            else
+                continue;
+              }
+
+    }
+}
+    printf("%d",a);
+    printf("\t%d",arr[i2]);
+
+}
+
+    
+
+
+                      
