@@ -1,0 +1,53 @@
+//
+//  main.c
+//  333
+//
+//  Created by MAITREYI NAIR on 04/01/21.
+//
+
+#include <stdio.h>
+
+int N,i1,k1;
+
+void Modify(int arr[],int i2);
+
+int main() {
+    scanf("%d",&N);
+    int i =0;
+    int arr[N];
+    while(i<N)
+    {
+        scanf("%d",&arr[i]);
+        i++;
+    }
+
+
+for(i1=1;i<=N;i++)
+{
+    for(k1=i1+1;k1<N;k1++)
+    {
+        arr[i1] = arr[i1] + i1;
+        arr[k1] = arr[k1] + k1;
+        
+        if(arr[i1]>N)
+            arr[i1] = arr[i1] - i1;
+        else
+           Modify(arr, i1);
+            
+    }
+    i1++;
+}
+}
+
+void Modify(int arr[],int i2)
+{
+ arr[i2] = arr[i2] + arr[i2+arr[i2]];
+    
+    if(arr[i2]>N)
+        printf("%d",arr[i2] - i2);
+    else
+        Modify(arr,i2);
+        
+    
+    
+}
