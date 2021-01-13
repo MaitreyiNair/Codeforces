@@ -1,0 +1,54 @@
+//
+//  main.c
+//  nnn
+//
+//  Created by MAITREYI NAIR on 06/01/21.
+//
+
+#include <stdio.h>
+int N, x, sum = 0;
+
+void arithmetic(int a);
+
+int main() {
+    scanf("%d",&N);
+    scanf("%d",&x);
+    int arr[N];
+    int i = 0;
+     while(i<N)
+    {
+        scanf("%d",&arr[i]);
+        if(arr[i]%x==0)
+            arithmetic(arr[i]);
+        else
+            break;
+        i++;
+    }
+    
+    int i2;
+    for(i2=0;i2<N;i2++)
+    {
+    sum = sum + arr[i2];
+    i2++;
+    }
+    printf("%d",sum);
+}
+
+
+
+void arithmetic(int a)
+{
+    int c = a/x;
+    
+    sum = sum + c*x;
+    int i1 =0;
+    
+    if(c%x==0)
+        while (i1<x) {
+            arithmetic(c);
+            i1++;
+        }
+        
+}
+
+
