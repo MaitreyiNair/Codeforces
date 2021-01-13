@@ -1,0 +1,47 @@
+//
+//  main.c
+//  Q111
+//
+//  Created by MAITREYI NAIR on 04/01/21.
+//
+
+#include <stdio.h>
+int t;
+void NEWYEAR(int long long a,int long long b, int long long c){
+    
+    int i1 = 1;
+    
+    while(i1<=c)
+    {
+        if(a%2==0)
+            a = a/2;
+            i1 = i1 *2;
+        if(b%2==0)
+            b = b/2;
+            i1 = i1 *2;
+        if(a%2!=0&&b%2==0)
+            printf("NO");
+    }
+    
+    if(i1>=c)
+        printf("YES");
+        
+    
+}
+
+
+int main() {
+    scanf("%d",&t);
+    
+    int i = 0;
+    int long long w, h, n;
+    while(i<t)
+    {
+        scanf("%lld",&w);
+        scanf("%lld",&h);
+        scanf("%lld",&n);
+        
+        NEWYEAR(w,h,n);
+        i++;
+         }
+}
