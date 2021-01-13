@@ -1,0 +1,45 @@
+//
+//  main.c
+//  222
+//
+//  Created by MAITREYI NAIR on 04/01/21.
+//
+
+#include <stdio.h>
+int T, i1 = 0;
+int N,a;
+int main()
+{
+    scanf("%d",&T);
+    while(i1<T)
+    {
+    scanf("%d",&N);
+    int arr[N];
+    int i = 0, sum= 0;
+    
+    while(i<N)
+    {
+        scanf("%d",&arr[i]);
+        sum = sum + arr[i];
+        i++;
+    }
+    
+    if(N==3)
+      a = N + 1;
+    else
+        a = N - 1;
+    
+    if(sum%2==0)
+    {
+      if(sum%a==0)
+          printf("YES");
+      else
+          printf("NO");
+          
+    }
+    else
+        printf("NO");
+        
+    i1++;
+}
+}
